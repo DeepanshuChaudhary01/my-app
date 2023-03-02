@@ -4,12 +4,12 @@ import Navbar from './Components/Navbar.js';
 import About from './Components/About.js';
 import { useState } from 'react';
 import Alert from './Components/Alert';
-import {
-  BrowserRouter as Router,
-  Routes,//switch
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,//switch
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 function App() {
@@ -34,19 +34,20 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
     {/* here we are creating an app on text conversions */}
   <Navbar title="Text App" abttxt="AboutTxt" theme={theme} toggleMode={toggleMode} />
   <Alert alert={alert}/>
   <div className="container my-3">
-  <Routes>
-  <Route path="/about" element={<About />} />
-  <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter text to analyse:" theme={theme} />}/>
+  <TextForm showAlert={showAlert} heading="Enter text to analyse:" theme={theme} />
+  {/* <Routes>
+  <Route exact path="/about" element={<About />} />//always good to use exact path instead of path to do exact matching
+  <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text to analyse:" theme={theme} />}/>
       
-  </Routes>
+  </Routes> */}
   {/* <TextForm showAlert={showAlert} heading="Enter text to analyse:" theme={theme} /> */}
   </div>
-  </Router>
+  {/* </Router> */}
     </>
   );
 }
