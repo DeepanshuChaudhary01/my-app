@@ -68,7 +68,7 @@ const HandleReverseClick=()=>{//using arrow function
     </div>
     <div className='container' style={{color: props.theme==='light'?'black':'white'}}>
       <h2>Your Text Summary</h2>
-      <p>{text.split(" ").length} and {text.length}</p>
+      <p>{text.split(" ").length} words and {text.length} characters</p>
       <h1>Preview</h1>
       <p>{text.length>0?text:"Enter something in textbox to preview it here"}</p>
     </div>
